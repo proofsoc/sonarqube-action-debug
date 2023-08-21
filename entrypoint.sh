@@ -45,5 +45,6 @@ else
     #-Dsonar.login="${INPUT_LOGIN}" \
     #-Dsonar.password="${SONAR_PASSWORD}" \
     -Dsonar.token="${INPUT_LOGIN}" \
+    -Dsonar.scm.provider="git" \
     -X
 fi
