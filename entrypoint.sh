@@ -38,14 +38,14 @@ if [[ ! -f "${INPUT_PROJECTBASEDIR%/}sonar-project.properties" ]]; then
     -Dsonar.sources="${INPUT_PROJECTBASEDIR}" \
     -Dsonar.sourceEncoding="${INPUT_ENCODING}" \
     -Dsonar.token="${INPUT_LOGIN}" \
-    -Dsonar.scm.provider="git" \
     -X
+    #-Dsonar.scm.provider="git" \
 else
   sonar-scanner \
     -Dsonar.host.url="${INPUT_HOST}" \
     -Dsonar.login="${INPUT_LOGIN}" \
     -Dsonar.password="${SONAR_PASSWORD}" \
     -Dsonar.token="${INPUT_LOGIN}" \
-    -Dsonar.scm.provider="git" \
     -X
+    #-Dsonar.scm.provider="git" \
 fi
